@@ -64,7 +64,7 @@ for (let i = 0; i < ourTeam.length; i++) {
 
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
-    containerDom.innerHTML += cardElement;
+    containerDom.append(cardElement);
     
 
 }
