@@ -1,5 +1,4 @@
 
-const infoTeamDom = document.getElementById("info-team");
 
 // array di oggetti (ogni oggetto è un membro del team)
 const ourTeam = [
@@ -39,16 +38,44 @@ console.log(ourTeam);
 
 
 
-for (let i = 0; i < ourTeam.length; i++) {
-    
-    const teamMember = ourTeam[i];
 
-    for (let key in teamMember) {
-        
-        console.log(teamMember[key]);
-        infoTeamDom.innerHTML += teamMember[key];
+
+
+generateInfo(ourTeam);
+generatePhoto();
+
+
+
+function generateInfo (arrayName) {
+
+    const infoTeamDom = document.getElementById("info-team");
+    let teamMember = "";
+
+    for (let i = 0; i < arrayName.length; i++) {
+    
+        teamMember = ourTeam[i];
+    
+        for (let key in teamMember) {
+            
+            console.log(key + "-" + teamMember[key]);
+            infoTeamDom.innerHTML += teamMember[key];
+            infoTeamDom.innerHTML += " ";
+        }
+        console.log(" ");
+        infoTeamDom.innerHTML += `<br>`;   
     }
-    console.log(" ");
-    infoTeamDom.innerHTML += `<br>`;   
 }
 
+
+
+function generatePhoto () {
+    for (let i = 0; i < ourTeam.length; i++) {
+
+        const photosTeamDom = document.getElementById("photos-team");
+            
+        const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
+        console.log(photoMemberTeam);
+        photosTeamDom.innerHTML += photoMemberTeam;
+        
+    }
+}
