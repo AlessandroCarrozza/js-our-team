@@ -38,44 +38,48 @@ console.log(ourTeam);
 
 
 
+const infoTeamDom = document.getElementById("info-team");
+const photosTeamDom = document.getElementById("photos-team");
+const containerDom = document.getElementById("container");
+let teamMember = "";
 
-
-
-generateInfo(ourTeam);
-generatePhoto();
-
-
-
-function generateInfo (arrayName) {
-
-    const infoTeamDom = document.getElementById("info-team");
-    let teamMember = "";
-
-    for (let i = 0; i < arrayName.length; i++) {
+for (let i = 0; i < ourTeam.length; i++) {
     
-        teamMember = ourTeam[i];
+    teamMember = ourTeam[i];
     
-        for (let key in teamMember) {
+    for (let key in teamMember) {
             
-            console.log(key + "-" + teamMember[key]);
-            infoTeamDom.innerHTML += teamMember[key];
-            infoTeamDom.innerHTML += " ";
-        }
-        console.log(" ");
-        infoTeamDom.innerHTML += `<br>`;   
-    }
+        console.log(key + "-" + teamMember[key]);
+        // infoTeamDom.innerHTML += teamMember[key];
+        // infoTeamDom.innerHTML += " ";
+
+    }  
+            
+    const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
+    // photosTeamDom.innerHTML += photoMemberTeam;
+    console.log(photoMemberTeam);
+    console.log(" ");
+    // infoTeamDom.innerHTML += `<br>`; 
+
+
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    containerDom.innerHTML += cardElement;
+    
+
 }
 
 
 
-function generatePhoto () {
-    for (let i = 0; i < ourTeam.length; i++) {
 
-        const photosTeamDom = document.getElementById("photos-team");
+// function generatePhoto () {
+//     for (let i = 0; i < ourTeam.length; i++) {
+
+//         const photosTeamDom = document.getElementById("photos-team");
             
-        const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
-        console.log(photoMemberTeam);
-        photosTeamDom.innerHTML += photoMemberTeam;
+//         const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
+//         console.log(photoMemberTeam);
+//         photosTeamDom.innerHTML += photoMemberTeam;
         
-    }
-}
+//     }
+// }
