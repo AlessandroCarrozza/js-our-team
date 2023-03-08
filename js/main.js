@@ -37,6 +37,8 @@ const ourTeam = [
 
 console.log(ourTeam);
 
+
+
 for (let i = 0; i < ourTeam.length; i++) {
     
     const teamMember = ourTeam[i];
@@ -44,8 +46,9 @@ for (let i = 0; i < ourTeam.length; i++) {
     for (let key in teamMember) {
         
         console.log(teamMember[key]);
+        infoTeamDom.innerHTML += teamMember[key];
     }
     console.log(" ");
-    
+    infoTeamDom.innerHTML += `<br>`;   
 }
 
