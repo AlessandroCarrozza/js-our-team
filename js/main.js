@@ -41,6 +41,7 @@ console.log(ourTeam);
 const infoTeamDom = document.getElementById("info-team");
 const photosTeamDom = document.getElementById("photos-team");
 const containerDom = document.getElementById("container");
+const cardDom = document.getElementsByClassName("card");
 let teamMember = "";
 
 for (let i = 0; i < ourTeam.length; i++) {
@@ -65,6 +66,8 @@ for (let i = 0; i < ourTeam.length; i++) {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
     containerDom.append(cardElement);
+
+    
     
 
 }
