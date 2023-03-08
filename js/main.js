@@ -34,3 +34,8 @@ const ourTeam = [
 ];
 
 console.log(ourTeam);
+
+for (let key in ourTeam) {
+    
+    console.log(ourTeam[key]);
+}
