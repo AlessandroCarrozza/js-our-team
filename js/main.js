@@ -37,15 +37,11 @@ const ourTeam = [
 console.log(ourTeam);
 
 
-
-const infoTeamDom = document.getElementById("info-team");
-const photosTeamDom = document.getElementById("photos-team");
-const containerDom = document.getElementById("container");
-let teamMember = "";
-
 for (let i = 0; i < ourTeam.length; i++) {
+
+    const containerDom = document.getElementById("container");
     
-    teamMember = ourTeam[i];
+    let teamMember = ourTeam[i];
     
     for (let key in teamMember) {
             
@@ -53,7 +49,7 @@ for (let i = 0; i < ourTeam.length; i++) {
 
     }  
             
-    const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
+    const photoMemberTeam = `<img src="img/${teamMember.photo}">`;
     console.log(photoMemberTeam);
     console.log(" ");
 
@@ -79,7 +75,6 @@ for (let i = 0; i < ourTeam.length; i++) {
     infoMember.append(ruleMember);
     ruleMember.innerHTML = teamMember.rule;
   
-
 }
 
 
