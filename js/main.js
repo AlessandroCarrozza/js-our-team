@@ -1,4 +1,6 @@
 
+const infoTeamDom = document.getElementById("info-team");
+
 // array di oggetti (ogni oggetto è un membro del team)
 const ourTeam = [
     {
@@ -35,7 +37,15 @@ const ourTeam = [
 
 console.log(ourTeam);
 
-for (let key in ourTeam) {
+for (let i = 0; i < ourTeam.length; i++) {
     
-    console.log(ourTeam[key]);
+    const teamMember = ourTeam[i];
+
+    for (let key in teamMember) {
+        
+        console.log(teamMember[key]);
+    }
+    console.log(" ");
+    
 }
+
