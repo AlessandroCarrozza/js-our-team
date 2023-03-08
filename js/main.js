@@ -50,43 +50,34 @@ for (let i = 0; i < ourTeam.length; i++) {
     for (let key in teamMember) {
             
         console.log(key + "-" + teamMember[key]);
-        // infoTeamDom.innerHTML += teamMember[key];
-        // infoTeamDom.innerHTML += " ";
 
     }  
             
     const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
-    // photosTeamDom.innerHTML += photoMemberTeam;
     console.log(photoMemberTeam);
     console.log(" ");
-    // infoTeamDom.innerHTML += `<br>`; 
 
 
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
     containerDom.append(cardElement);
 
-    const cardDom = document.getElementsByClassName("card");
-    const imgCardElement = document.createElement("div");
-    imgCardElement.classList.add("img-card");
-    cardDom.innerHTML += imgCardElement;
+    const imgElement = document.createElement("div");
+    imgElement.classList.add("img-card");
+    cardElement.append(imgElement);
+    imgElement.innerHTML = photoMemberTeam;
 
-    
-    
+    const infoMember = document.createElement("div");
+    infoMember.classList.add("info-member");
+    cardElement.append(infoMember);
+
+    const nameMember = document.createElement("h2");
+    infoMember.append(nameMember);
+
+    const ruleMember = document.createElement("h3");
+    infoMember.append(ruleMember);
+  
 
 }
 
 
-
-
-// function generatePhoto () {
-//     for (let i = 0; i < ourTeam.length; i++) {
-
-//         const photosTeamDom = document.getElementById("photos-team");
-            
-//         const photoMemberTeam = `<img src="img/${ourTeam[i].photo}">`;
-//         console.log(photoMemberTeam);
-//         photosTeamDom.innerHTML += photoMemberTeam;
-        
-//     }
-// }
