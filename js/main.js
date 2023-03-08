@@ -73,9 +73,11 @@ for (let i = 0; i < ourTeam.length; i++) {
 
     const nameMember = document.createElement("h2");
     infoMember.append(nameMember);
+    nameMember.innerHTML = teamMember.name;
 
     const ruleMember = document.createElement("h3");
     infoMember.append(ruleMember);
+    ruleMember.innerHTML = teamMember.rule;
   
 
 }
