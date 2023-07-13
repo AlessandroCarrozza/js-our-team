@@ -1,6 +1,5 @@
-
 /* utility */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +8,7 @@
 
 
 /* main code */
-body{
+body {
     background-color: lightblue;
 }
 
@@ -19,7 +18,7 @@ body{
     justify-content: center;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-top: 120px;
 }
@@ -28,23 +27,22 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-} 
+}
 
 
-.card{
+.card {
     margin: 20px;
     width: 250px;
     height: 400px;
     border: 2px solid black;
 }
 
-.img-card{
+.img-card {
     width: 100%;
     height: 80%;
-    background-color: red;
 }
 
-.info-member{
+.info-member {
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -53,8 +51,9 @@ img {
     background-color: white;
 }
 
-h3{
+h3 {
     padding-top: 5px;
-    font-size: 16px;
+    font-size: 14px;
     color: grey;
+    font-weight: 600;
 }
